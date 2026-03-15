@@ -6,6 +6,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,9 +14,13 @@
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
+  <link rel="icon" type="image/png" href="./img/icons/boske-favicon.png" sizes="32x32">
+
+  <link rel="apple-touch-icon" href="./img/icons/boske-favicon.png">
+
+  <link rel="mask-icon" href="./img/icons/boske-favicon.png" color="#000000">
   <title></title>
-  <script defer src="js/bundle.js"></script>
-  <link href="css/style.min.css" rel="stylesheet"></head>
+<script defer src="js/bundle.js"></script><script defer src="js/libs.js"></script><script defer src="js/style.js"></script><link href="css/style.min.css" rel="stylesheet"></head>
 <body>
 
 <header class="header">
@@ -33,11 +38,51 @@
           </a>
           <button class="close-menu-button"></button>
           <ul class="main-menu">
-            <li>
+            <li class="menu-item-has-children">
               <a href="#">Каталог</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="/">Кухни</a>
+                </li>
+                <li>
+                  <a href="#">Гардеробные</a>
+                </li>
+                <li>
+                  <a href="#">Тв-зоны</a>
+                </li>
+                <li>
+                  <a href="#">Детские</a>
+                </li>
+                <li>
+                  <a href="#">Прихожие</a>
+                </li>
+                <li>
+                  <a href="#">Ванные</a>
+                </li>
+              </ul>
             </li>
-            <li>
+            <li class="menu-item-has-children">
               <a href="#">Проекты</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Кухни</a>
+                </li>
+                <li>
+                  <a href="#">Гардеробные</a>
+                </li>
+                <li>
+                  <a href="#">Тв-зоны</a>
+                </li>
+                <li>
+                  <a href="#">Детские</a>
+                </li>
+                <li>
+                  <a href="#">Прихожие</a>
+                </li>
+                <li>
+                  <a href="#">Ванные</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#">Для дизайнеров</a>
@@ -45,11 +90,22 @@
             <li>
               <a href="#">Производство</a>
             </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-            <li>
+            <li class="menu-item-has-children">
               <a href="#">Журнал</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Истории</a>
+                </li>
+                <li>
+                  <a href="#">Материалы и фактуры</a>
+                </li>
+                <li>
+                  <a href="#">Решения и идеи</a>
+                </li>
+                <li>
+                  <a href="#">Производство</a>
+                </li>
+              </ul>
             </li>
           </ul>
           <a data-src="modal-form" href="#" class="btn btn-white btn-mobile open-modal-dialog">Обсудить проект</a>
@@ -68,7 +124,11 @@
 
 
 
-<section class="main-banner banner-page animate-section" style="background-image: url(./img/main-banner-back.webp)">
+<section class="main-banner banner-page animate-section">
+  <div class="banner-back">
+    <img class="banner-back-pc" src="./img/single-block-back.webp" alt="">
+    <img class="banner-back-mobile" src="./img/single-block-back-mobile.webp" alt="">
+  </div>
   <div class="container">
     <div class="banner-content">
       <h1>Заголовок статьи</h1>
@@ -80,120 +140,105 @@
   </div>
 </section>
 
-<section class="single-blog-main animate-section">
+<section class="single-blog-main animate-section slider-section">
   <div class="container">
-    <div class="tabs-block">
-      <div class="tabs-nav">
-        <button type="button" class="nav-button" data-tab-id="1">
-          <span>Все</span>
-        </button>
-        <button type="button" class="nav-button" data-tab-id="2">
-          <span>Истории</span>
-        </button>
-        <button type="button" class="nav-button" data-tab-id="3">
-          <span>Материалы и фактуры</span>
-        </button>
-        <button type="button" class="nav-button" data-tab-id="4">
-          <span>Решения и идеи</span>
-        </button>
-        <button type="button" class="nav-button" data-tab-id="5">
-          <span>Производство </span>
-        </button>
+
+    <div class="posts-nav-block">
+      <a href="#" class="post-link post-link-prev">Предыдущая статья</a>
+      <div class="separator"></div>
+      <a href="#" class="post-link post-link-next">Следующая статья</a>
+    </div>
+
+    <ul class="single-blog-tags">
+      <li>
+        <span>Истории</span>
+      </li>
+      <li>
+        <span>Материалы и фактуры</span>
+      </li>
+      <li>
+        <span>Решения и идеи</span>
+      </li>
+      <li>
+        <span>Производство</span>
+      </li>
+    </ul>
+
+    <div class="single-blog-content">
+      <div class="content-default">
+        <img src="./img/catalog-item-img1.webp" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+        <img src="./img/catalog-item-img1.webp" alt="">
       </div>
-      <div class="tab-panels">
-        <div class="tab-panel" data-tab-id="1">
-          <div class="tab-panel-content">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="image-wrapper">
-                  <img src="./img/callback-type-back.webp" alt="">
-                </div>
+      <div class="content-block">
+        <div class="subtitle">Подзаголовок</div>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.</p>
+        <p>Lorem ipsum dolor:</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        </ul>
+        <div class="images-wrapper">
+          <img src="./img/single-blog-example-img.webp" alt="">
+          <img src="./img/single-blog-example-img.webp" alt="">
+        </div>
+      </div>
+      <div class="content-block-slider">
+        <div class="subtitle">Подзаголовок</div>
+        <div class="description">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.</p>
+        </div>
+        <div class="slider-container">
+          <div class="gallery-slider slider-wrapper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/single-blog-example-img.webp" alt="">
               </div>
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="description description-top">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-                <div class="description description-bottom">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
+              <div class="swiper-slide">
+                <img src="./img/single-blog-example-img.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/single-blog-example-img.webp" alt="">
               </div>
             </div>
           </div>
         </div>
-        <div class="tab-panel" data-tab-id="2">
-          <div class="tab-panel-content">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="image-wrapper">
-                  <img src="./img/callback-back.webp" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="description description-top">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-                <div class="description description-bottom">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-              </div>
-            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="content-block">
+        <div class="subtitle">Подзаголовок</div>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.</p>
+        <p>Lorem ipsum dolor:</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        </ul>
+        <div class="images-wrapper">
+          <img src="./img/single-blog-example-img.webp" alt="">
+        </div>
+      </div>
+
+      <div class="row content-block-row">
+        <div class="col-lg-12 col-md-12 col-m-12">
+          <div class="subtitle">Подзаголовок</div>
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.</p>
           </div>
         </div>
-        <div class="tab-panel" data-tab-id="3">
-          <div class="tab-panel-content">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="image-wrapper">
-                  <img src="./img/callback-type-back.webp" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="description description-top">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-                <div class="description description-bottom">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-6 col-md-12 col-m-12">
+          <div class="image-wrapper">
+            <img src="./img/single-blog-example-img.webp" alt="" class="">
           </div>
         </div>
-        <div class="tab-panel" data-tab-id="4">
-          <div class="tab-panel-content">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="image-wrapper">
-                  <img src="./img/callback-back.webp" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="description description-top">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-                <div class="description description-bottom">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-panel" data-tab-id="5">
-          <div class="tab-panel-content">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="image-wrapper">
-                  <img src="./img/callback-type-back.webp" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-m-12">
-                <div class="description description-top">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-                <div class="description description-bottom">
-                  <p>основной тексто сновной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст основной текст </p>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-6 col-md-12 col-m-12">
+          <div class="text-block-wrapper">
+            <p>За каждой мебелью BOSKE — команда инженеров, мастеров и дизайнеров. Мы проектируем, собираем и проверяем каждую деталь на собственной фабрике. </p>
           </div>
         </div>
       </div>
@@ -209,7 +254,7 @@
       <article class="col-lg-4 col-md-6 col-m-12">
         <a href="#" class="card-wrapper">
           <div class="card-image">
-            <img src="./img/blog-card-image.webp" alt="">
+            <img src="./img/blog-page-card-img6.webp" alt="">
           </div>
           <div class="card-title">
             <span>Почему супермат стал символом современного интерьера</span>
@@ -222,7 +267,7 @@
       <article class="col-lg-4 col-md-6 col-m-12">
         <a href="#" class="card-wrapper">
           <div class="card-image">
-            <img src="./img/blog-card-image.webp" alt="">
+            <img src="./img/blog-page-card-img4.webp" alt="">
           </div>
           <div class="card-title">
             <span>Почему супермат стал символом современного интерьера</span>
@@ -235,7 +280,7 @@
       <article class="col-lg-4 col-md-6 col-m-12">
         <a href="#" class="card-wrapper">
           <div class="card-image">
-            <img src="./img/blog-card-image.webp" alt="">
+            <img src="./img/blog-page-card-img5.webp" alt="">
           </div>
           <div class="card-title">
             <span>Почему супермат стал символом современного интерьера</span>
@@ -256,6 +301,7 @@
       <div class="social-links">
         <a href="#" class="btn-link btn-link-telegram"></a>
         <a href="#" class="btn-link btn-link-whatsapp"></a>
+        <a href="#" class="btn-link btn-link-max"></a>
         <a href="#" class="btn-link btn-link-vk"></a>
       </div>
       <a href="blog.html" class="btn btn-gold">Назад в журнал</a>
@@ -274,111 +320,446 @@
 </main>
 
 <footer class="footer animate-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-12 col-m-12">
-          <div class="footer-form">
-            <div class="form-title">
-              Заказать звонок
-            </div>
-            <div class="wpcf7 js" id="wpcf7-f86-o1" lang="ru-RU" dir="ltr" data-wpcf7-id="86">
-              <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-              <form action="#">
-                <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="86"><input type="hidden" name="_wpcf7_version" value="6.1.3"><input type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f86-o1"><input type="hidden" name="_wpcf7_container_post" value="0"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                </fieldset>
-                <p><span class="wpcf7-form-control-wrap" data-name="placeholder"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" value="ваш телефон" type="tel" name="placeholder"></span><br>
-                  <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Жду звонка"><span class="wpcf7-spinner"></span>
-                </p><div class="wpcf7-response-output" aria-hidden="true"></div>
-              </form>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-12 col-m-12">
+        <div class="footer-form">
+          <div class="form-title">
+            Заказать звонок
           </div>
-        </div>
-        <div class="col-lg-7 col-md-12 col-m-12">
-          <div class="footer-wrapper">
-            <nav class="footer-nav">
-              <ul class="footer-menu">
-                <li>
-                  <a href="#">Каталог</a>
-                </li>
-                <li>
-                  <a href="#">Производство</a>
-                </li>
-                <li>
-                  <a href="#">Проекты</a>
-                </li>
-                <li>
-                  <a href="#">Журнал</a>
-                </li>
-                <li>
-                  <a href="#">Для дизайнеров</a>
-                </li>
-                <li>
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="footer-contacts">
-              <div class="contact-link contact-link-phone">
-                <a href="tel:79113333333">+7(911) 33-333-33</a>
-              </div>
-              <div class="contact-link contact-link-mail">
-                <a href="mailto:@boskemebel@yandex.ru">@boskemebel@yandex.ru</a>
-              </div>
-              <div class="footer-socials">
-                <div class="btn-wrapper">
-                  <a href="#" class="btn-link btn-link-telegram"></a>
-                </div>
-                <div class="btn-wrapper">
-                  <a href="#" class="btn-link btn-link-whatsapp"></a>
-                </div>
-                <div class="btn-wrapper">
-                  <a href="#" class="btn-link btn-link-vk"></a>
-                </div>
-                <div class="btn-wrapper">
-                  <a href="#" class="btn-link btn-link-printerest"></a>
-                </div>
-                <div class="btn-wrapper">
-                  <a href="#" class="btn-link btn-link-yandex"></a>
-                </div>
-                <div class="btn-wrapper">
-                  <a href="#" class="btn-link btn-link-max"></a>
-                </div>
-              </div>
+          <div class="wpcf7 js" id="wpcf7-f86-o1" lang="ru-RU" dir="ltr" data-wpcf7-id="86">
+            <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+              <ul></ul>
             </div>
+            <form action="#">
+              <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="86"><input
+                type="hidden" name="_wpcf7_version" value="6.1.3"><input type="hidden" name="_wpcf7_locale"
+                                                                         value="ru_RU"><input type="hidden"
+                                                                                              name="_wpcf7_unit_tag"
+                                                                                              value="wpcf7-f86-o1"><input
+                type="hidden" name="_wpcf7_container_post" value="0"><input type="hidden" name="_wpcf7_posted_data_hash"
+                                                                            value="">
+              </fieldset>
+              <p><span class="wpcf7-form-control-wrap" data-name="placeholder"><input size="40" maxlength="400"
+                                                                                      class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                                                                                      aria-required="true"
+                                                                                      aria-invalid="false"
+                                                                                      value="ваш телефон" type="tel"
+                                                                                      name="placeholder"></span><br>
+                <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Жду звонок"><span
+                  class="wpcf7-spinner"></span>
+              </p>
+              <div class="wpcf7-response-output" aria-hidden="true"></div>
+            </form>
           </div>
         </div>
       </div>
-      <div class="row-bottom">
-        <div class="footer-logo">
-          <img src="./img/logo.webp" alt="">
-        </div>
-        <div class="footer-links">
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Согласие на обработку персональных данных</a>
-          
+      <div class="col-lg-7 col-md-12 col-m-12">
+        <div class="footer-wrapper">
+          <nav class="footer-nav">
+            <ul class="footer-menu">
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">Производство</a>
+              </li>
+              <li>
+                <a href="#">Проекты</a>
+              </li>
+              <li>
+                <a href="#">Журнал</a>
+              </li>
+              <li>
+                <a href="#">Для дизайнеров</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-contacts">
+            <div class="contact-link contact-link-phone">
+              <a href="tel:79113333333">+7(937) 685 44 44</a>
+            </div>
+            <div class="contact-link contact-link-address">
+              <p>Адрес салона: г. Саранск</p>
+              <p>проспект Ленина, 29</p>
+            </div>
+            <div class="contact-link contact-link-mail">
+              <a href="mailto:@boskemebel@yandex.ru">boskemebel@yandex.ru</a>
+            </div>
+            <div class="footer-socials">
+              <div class="btn-wrapper">
+                <a href="#" class="btn-link btn-link-telegram"></a>
+              </div>
+              <div class="btn-wrapper">
+                <a href="#" class="btn-link btn-link-whatsapp"></a>
+              </div>
+              <div class="btn-wrapper">
+                <a href="#" class="btn-link btn-link-vk"></a>
+              </div>
+              <div class="btn-wrapper">
+                <a href="#" class="btn-link btn-link-printerest"></a>
+              </div>
+              <div class="btn-wrapper">
+                <a href="#" class="btn-link btn-link-yandex"></a>
+              </div>
+              <div class="btn-wrapper">
+                <a href="#" class="btn-link btn-link-max"></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="row-bottom">
+      <div class="footer-logo">
+        <img src="./img/logo.webp" alt="">
+      </div>
+      <div class="footer-documents">
+        <p>ИП Меркулов С.А.</p>
+        <p>ИНН 772074376904</p>
+        <p>ОГРНИП 324774600176575</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Не является публичной офертой</a>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<div class="modal-dialog modal-form modal-opening" style="display:none;">
+<div class="modal-dialog modal-form modal-form-dark" style="display:none;">
   <div class="modal-content">
     <div class="modal-body">
       <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
       <div class="form-wrapper">
         <div class="modal-title">Задать вопрос менеджеру</div>
-        <div class="wpcf7 js" id="wpcf7-f87-o1" lang="ru-RU" dir="ltr" data-wpcf7-id="87">
-          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-          <form action="/dev/#wpcf7-f87-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
-            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="87"><input type="hidden" name="_wpcf7_version" value="6.1.3"><input type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f87-o1"><input type="hidden" name="_wpcf7_container_post" value="0"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
+        <div class="wpcf7 js" id="wpcf7-f82-o3" lang="ru-RU" dir="ltr" data-wpcf7-id="82">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="/#wpcf7-f82-o3" method="post" class="wpcf7-form init" aria-label="Контактная форма"
+                novalidate="novalidate" data-status="init">
+            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="82"><input type="hidden"
+                                                                                                           name="_wpcf7_version"
+                                                                                                           value="6.1.4"><input
+              type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag"
+                                                                      value="wpcf7-f82-o3"><input type="hidden"
+                                                                                                  name="_wpcf7_container_post"
+                                                                                                  value="0"><input
+              type="hidden" name="_wpcf7_posted_data_hash" value="">
             </fieldset>
-            <p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ваше имя" value="" type="text" name="your-name"></span><br>
-              <span class="wpcf7-form-control-wrap" data-name="your-tel"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Телефон" value="" type="tel" name="your-tel"></span><br>
-              <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Комментарий" name="your-message"></textarea></span><br>
-              <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Получить ответ"><span class="wpcf7-spinner"></span>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400"
+                                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                 aria-required="true"
+                                                                                 aria-invalid="false"
+                                                                                 placeholder="Ваше имя" value=""
+                                                                                 type="text" name="your-name"></span>
+              <span class="wpcf7-form-control-wrap" data-name="your-tel"><input size="40" maxlength="400"
+                                                                                class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Телефон" value=""
+                                                                                type="tel" name="your-tel"></span>
+              <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10"
+                                                                                       maxlength="2000"
+                                                                                       class="wpcf7-form-control wpcf7-textarea"
+                                                                                       aria-invalid="false"
+                                                                                       placeholder="Комментарий"
+                                                                                       name="your-message"></textarea></span>
+              <span class="wpcf7-form-control-wrap" data-name="acceptance-517"><span
+                class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input
+                type="checkbox" name="acceptance-517" value="1" aria-invalid="false"><span
+                class="wpcf7-list-item-label">Я даю Согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a
+                href="/privacy-policy/">Политике обработки персональных данных</a>.</span></label></span></span></span>
+              <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Получить ответ"><span
+              class="wpcf7-spinner"></span>
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-form-dark modal-form-second" style="display:none;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <div class="form-wrapper">
+        <div class="modal-title">Обсудить сотрудничество</div>
+
+        <div class="wpcf7 js" id="wpcf7-f87-o6" lang="ru-RU" dir="ltr" data-wpcf7-id="87">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+          <form action="/" method="post" class="wpcf7-form init" aria-label="Контактная форма" enctype="multipart/form-data" novalidate="novalidate" data-status="init">
+            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="87"><input type="hidden" name="_wpcf7_version" value="6.1.4"><input type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f87-o6"><input type="hidden" name="_wpcf7_container_post" value="0"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </fieldset>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Ваше имя" value="" type="text" name="your-name"></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Телефон" value="" type="tel" name="your-phone"></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="your-proposal"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Комментарий" name="your-proposal"></textarea></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="acceptance-517"><span class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-517" value="1" aria-invalid="false"><span class="wpcf7-list-item-label">Я даю Согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a href="/privacy-policy/">Политике обработки персональных данных</a>.</span></label></span></span></span>
+
+              <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Обсудить"><span class="wpcf7-spinner"></span>
             </p><div class="wpcf7-response-output" aria-hidden="true"></div>
           </form>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-form-dark modal-form-file" style="display:none;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <div class="form-wrapper">
+        <div class="modal-title">Передайте проект для расчёта и согласования</div>
+
+        <div class="wpcf7 js" id="wpcf7-f87-o6" lang="ru-RU" dir="ltr" data-wpcf7-id="87">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+          <form action="/" method="post" class="wpcf7-form init" aria-label="Контактная форма" enctype="multipart/form-data" novalidate="novalidate" data-status="init">
+            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="87"><input type="hidden" name="_wpcf7_version" value="6.1.4"><input type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f87-o6"><input type="hidden" name="_wpcf7_container_post" value="0"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </fieldset>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Ваше имя" value="" type="text" name="your-name"></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="placeholder"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" placeholder="Город" type="text" name="placeholder"></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Телефон" value="" type="tel" name="your-phone"></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="file"><input size="40" class="wpcf7-form-control wpcf7-file" accept="audio/*,video/*,image/*" aria-invalid="false" type="file" name="file"></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="your-proposal"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Комментарий" name="your-proposal"></textarea></span>
+
+              <span class="wpcf7-form-control-wrap" data-name="acceptance-517"><span class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-517" value="1" aria-invalid="false"><span class="wpcf7-list-item-label">Я даю Согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a href="/privacy-policy/">Политике обработки персональных данных</a>.</span></label></span></span></span>
+
+              <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Обсудить"><span class="wpcf7-spinner"></span>
+            </p><div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-form-light modal-form-light-enter" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <div class="form-wrapper">
+        <div class="modal-title">Подсказать по материалам и проектированию?</div>
+        <div class="form-subtitle">Оставьте контакты — мы свяжемся
+          и подскажем оптимальное решение
+        </div>
+        <div class="wpcf7 js" id="wpcf7-f82-o3" lang="ru-RU" dir="ltr" data-wpcf7-id="82">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="/#wpcf7-f82-o3" method="post" class="wpcf7-form init" aria-label="Контактная форма"
+                novalidate="novalidate" data-status="init">
+            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="82"><input type="hidden"
+                                                                                                           name="_wpcf7_version"
+                                                                                                           value="6.1.4"><input
+              type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag"
+                                                                      value="wpcf7-f82-o3"><input type="hidden"
+                                                                                                  name="_wpcf7_container_post"
+                                                                                                  value="0"><input
+              type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </fieldset>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400"
+                                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                 aria-required="true"
+                                                                                 aria-invalid="false"
+                                                                                 placeholder="Ваше имя" value=""
+                                                                                 type="text" name="your-name"></span>
+              <span class="wpcf7-form-control-wrap" data-name="your-tel"><input size="40" maxlength="400"
+                                                                                class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Телефон" value=""
+                                                                                type="tel" name="your-tel"></span>
+              <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10"
+                                                                                       maxlength="2000"
+                                                                                       class="wpcf7-form-control wpcf7-textarea"
+                                                                                       aria-invalid="false"
+                                                                                       placeholder="Комментарий"
+                                                                                       name="your-message"></textarea></span>
+              <span class="wpcf7-form-control-wrap" data-name="acceptance-517"><span
+                class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input
+                type="checkbox" name="acceptance-517" value="1" aria-invalid="false"><span
+                class="wpcf7-list-item-label">Я даю Согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a
+                href="/privacy-policy/">Политике обработки персональных данных</a>.</span></label></span></span></span>
+              <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Получить консультацию"><span
+              class="wpcf7-spinner"></span>
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-form-light modal-form-light-exit" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <div class="form-wrapper">
+        <div class="modal-title">ЧЕК-ЛИСТ ПЕРЕД ЗАКАЗОМ КУХНИ</div>
+        <div class="form-subtitle">СПИСОК ВАЖНЫХ ВОПРОСОВ, КОТОРЫЕ СТОИТ
+          УЧЕСТЬ ПЕРЕД ЗАКАЗОМ КУХНИ
+        </div>
+        <div class="wpcf7 js" id="wpcf7-f87-o3" lang="ru-RU" dir="ltr" data-wpcf7-id="87">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="/dev/#wpcf7-f87-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма"
+                novalidate="novalidate" data-status="init">
+            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="87"><input type="hidden"
+                                                                                                           name="_wpcf7_version"
+                                                                                                           value="6.1.3"><input
+              type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag"
+                                                                      value="wpcf7-f87-o1"><input type="hidden"
+                                                                                                  name="_wpcf7_container_post"
+                                                                                                  value="0"><input
+              type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </fieldset>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-tel"><input size="40" maxlength="400"
+                                                                                class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Телефон" value=""
+                                                                                type="tel" name="your-tel"></span><br>
+              <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Получить чек-лист"><span
+              class="wpcf7-spinner"></span>
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-form-light modal-form-light-default" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <div class="form-wrapper">
+        <div class="modal-title">Рассчитать похожее решение</div>
+
+        <div class="wpcf7 js" id="wpcf7-f82-o3" lang="ru-RU" dir="ltr" data-wpcf7-id="82">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="/#wpcf7-f82-o3" method="post" class="wpcf7-form init" aria-label="Контактная форма"
+                novalidate="novalidate" data-status="init">
+            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="82"><input type="hidden"
+                                                                                                           name="_wpcf7_version"
+                                                                                                           value="6.1.4"><input
+              type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag"
+                                                                      value="wpcf7-f82-o3"><input type="hidden"
+                                                                                                  name="_wpcf7_container_post"
+                                                                                                  value="0"><input
+              type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </fieldset>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400"
+                                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                 aria-required="true"
+                                                                                 aria-invalid="false"
+                                                                                 placeholder="Имя" value=""
+                                                                                 type="text" name="your-name"></span>
+              <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400"
+                                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                 aria-required="true"
+                                                                                 aria-invalid="false"
+                                                                                 placeholder="Фамилия" value=""
+                                                                                 type="text" name="your-surname"></span>
+              <span class="wpcf7-form-control-wrap" data-name="your-tel"><input size="40" maxlength="400"
+                                                                                class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Телефон" value=""
+                                                                                type="text" name="your-tel"></span>
+              <span class="wpcf7-form-control-wrap" data-name="acceptance-517"><span
+                class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input
+                type="checkbox" name="acceptance-517" value="1" aria-invalid="false"><span
+                class="wpcf7-list-item-label">Я даю Согласие на обработку моих персональных данных в порядке и на условиях, указанных в <a
+                href="/privacy-policy/">Политике обработки персональных данных</a>.</span></label></span></span></span>
+              <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Получить консультацию"><span
+              class="wpcf7-spinner"></span>
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-form-light modal-form-light-pdf" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <div class="form-wrapper">
+        <div class="modal-title">ЧЕК-ЛИСТ ПЕРЕД ЗАКАЗОМ КУХНИ</div>
+        <div class="form-subtitle">СПИСОК ВАЖНЫХ ВОПРОСОВ, КОТОРЫЕ СТОИТ
+          УЧЕСТЬ ПЕРЕД ЗАКАЗОМ КУХНИ
+        </div>
+        <div class="wpcf7 js" id="wpcf7-f87-o3" lang="ru-RU" dir="ltr" data-wpcf7-id="87">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="/dev/#wpcf7-f87-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма"
+                novalidate="novalidate" data-status="init">
+            <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="87"><input type="hidden"
+                                                                                                           name="_wpcf7_version"
+                                                                                                           value="6.1.3"><input
+              type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag"
+                                                                      value="wpcf7-f87-o1"><input type="hidden"
+                                                                                                  name="_wpcf7_container_post"
+                                                                                                  value="0"><input
+              type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </fieldset>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-tel"><input size="40" maxlength="400"
+                                                                                class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Телефон" value=""
+                                                                                type="tel" name="your-tel"></span><br>
+              <a href="./img/document.pdf" class="btn btn-gold" download>Получить чек-лист</a>
+                <span
+              class="wpcf7-spinner"></span>
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-cookie" style="display: flex;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <div class="cookie-wrapper">
+        <p>
+          Сайт использует cookie-файлы. К сайту подключен сервис Яндекс.Метрика, который использует cookie-файлы.
+          Оставаясь на сайте, вы даете свое
+          <a href="#">согласие на обработку персональных данных</a> в порядке, указанном в <a href="#">Политике
+          обработки персональных данных</a>.
+        </p>
+        <a href="#" class="btn btn-gold btn-accept">Согласен</a>
       </div>
     </div>
   </div>
